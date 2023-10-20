@@ -16,7 +16,7 @@ agent = create_csv_agent(
     agent_type=AgentType.OPENAI_FUNCTIONS,
 )
 
-openai.api_key = "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"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
